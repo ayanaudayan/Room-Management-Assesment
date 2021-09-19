@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+<body>
+<h3>VIEW ROOM</h3>
+</body>
+
+<form th:action="@{/update}" th:object="${room}"method="post">
+<table>
+	<tr>
+		<td><label>Room Name</label></td>
+		<td><input type="text" th:field="*{name}" id="name"></input></td>
+	</tr>
+
+	<tr>
+		<td><label>Room NO:</label></td>
+		<td><input type="text" th:field="*{roomNo}" id="roomNo"></input></td>
+	</tr>
+	<tr>
+		<td><label>Building:</label></td>
+		<td><input type="text" th:field="*{building}" id="building"></input></td>
+	</tr>
+	
+	<tr>
+		<td><label>Floor:</label></td>
+		<td><input type="text" th:field="*{floor}" id="floor"></input></td>
+	</tr>
+	<input type="hidden" th:field="*{id}" id="id"></input></td>
+	
+</table>
+<button>Update</button>
+    </form>
+</html>

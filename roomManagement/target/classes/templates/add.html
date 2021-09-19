@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/create}" th:object="${room}"method="post">
+<table>
+	<tr>
+		<td><label>Room Name</label></td>
+		<td><input type="text" th:field="*{name}" id="name"></input></td>
+	</tr>
+
+	<tr>
+		<td><label>Room NO:</label></td>
+		<td><input type="text" th:field="*{roomNo}" id="roomNo"></input></td>
+	</tr>
+	<tr>
+		<td><label>Floor:</label></td>
+		<td><input type="text" th:field="*{floor}" id="floor"></input></td>
+	</tr>
+	<tr>
+		<td><p>Select Building:</p></td>
+	    <td><select th:field="*{building}">
+	    
+	    <option th:value="'BuildingA'" th:text="BuildingA"></option>
+	    <option th:value="'BuildingB'" th:text="BuildingB"></option>
+	    <option th:value="'BuildingC'" th:text="BuildingC"></option>
+        </select></td>	</tr>
+	
+	
+	
+</table>
+<button>ADD</button>
+    </form>
+</body>
+</html>
